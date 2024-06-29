@@ -47,13 +47,3 @@ func processSellOrder(order TradeEvent) {
 	}
 	orderBook.SellOrders = append(orderBook.SellOrders, order)
 }
-
-type OrderBook struct {
-	BuyOrders  []TradeEvent
-	SellOrders []TradeEvent
-}
-
-var orderBook = OrderBook{
-	BuyOrders:  make([]TradeEvent, 0),
-	SellOrders: make([]TradeEvent, 0),
-}
